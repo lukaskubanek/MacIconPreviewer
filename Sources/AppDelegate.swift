@@ -9,10 +9,14 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+internal class AppDelegate: NSObject, NSApplicationDelegate {
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        
+    internal lazy var mainWindowController: MainWindowController = {
+        return MainWindowController(windowNibName: "MainWindowController")
+    }()
+    
+    internal func applicationDidFinishLaunching(notification: NSNotification) {
+        mainWindowController.showWindow(nil)
     }
     
 }
