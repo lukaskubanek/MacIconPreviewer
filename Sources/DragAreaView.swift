@@ -78,16 +78,26 @@ internal class DragAreaView: NSView {
         return NSImage.canInitWithPasteboard(pasteboard)
     }
     
-    override func performDragOperation(sender: NSDraggingInfo) -> Bool {
+    internal override func performDragOperation(sender: NSDraggingInfo) -> Bool {
         let pasteboard = sender.draggingPasteboard()
         
         guard let image = NSImage(pasteboard: pasteboard) else { return false }
-        let URLString = NSURL(fromPasteboard: pasteboard)?.absoluteString ?? "unknown file"
-        
         NSApp.applicationIconImage = image
-        Swift.print("Setting icon to \(URLString)")
+        
+        let fileName = fileNameForPasteboard(pasteboard)
+        Swift.print("Setting icon to '\(fileName)'")
         
         return true
+    }
+    
+    private func fileNameForPasteboard(pasteboard: NSPasteboard) -> String {
+        if let propertyList = pasteboard.propertyListForType(NSFilenamesPboardType) as? [String] {
+            if let fileName = propertyList.first {
+                return fileName
+            }
+        }
+        
+        return "unknown file"
     }
     
 }
