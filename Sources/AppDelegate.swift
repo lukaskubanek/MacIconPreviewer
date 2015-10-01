@@ -19,4 +19,8 @@ internal class AppDelegate: NSObject, NSApplicationDelegate {
         mainWindowController.showWindow(nil)
     }
     
+    internal func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+        return true
+    }
+    
 }
