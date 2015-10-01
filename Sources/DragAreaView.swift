@@ -85,6 +85,7 @@ internal class DragAreaView: NSView {
         NSApp.applicationIconImage = image
         
         let fileName = fileNameForPasteboard(pasteboard)
+        window?.title = fileName
         Swift.print("Setting icon to '\(fileName)'")
         
         return true
@@ -92,8 +93,8 @@ internal class DragAreaView: NSView {
     
     private func fileNameForPasteboard(pasteboard: NSPasteboard) -> String {
         if let propertyList = pasteboard.propertyListForType(NSFilenamesPboardType) as? [String] {
-            if let fileName = propertyList.first {
-                return fileName
+            if let filePath = propertyList.first {
+                return (filePath as NSString).lastPathComponent
             }
         }
         
