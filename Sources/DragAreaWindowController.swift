@@ -19,7 +19,7 @@ internal class DragAreaWindowController: NSWindowController {
     internal weak var delegate: DragAreaWindowControllerDelegate?
     
     @IBOutlet internal weak var dragAreaView: DragAreaView!
-    
+        
     @IBAction internal func dismiss(sender: AnyObject) {
         delegate?.didDismissDragAreaWindowController(self)
     }

@@ -15,6 +15,7 @@
 		80B638FE1BBD6401005691E3 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B638FD1BBD6401005691E3 /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 		80B639041BBD678A005691E3 /* DragAreaWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B639031BBD678A005691E3 /* DragAreaWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 		80B639061BBD67A0005691E3 /* DragAreaWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B639051BBD67A0005691E3 /* DragAreaWindowController.swift */; settings = {ASSET_TAGS = (); }; };
+		80B639081BBD7849005691E3 /* DragAreaArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B639071BBD7849005691E3 /* DragAreaArrowView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		80B638FD1BBD6401005691E3 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		80B639031BBD678A005691E3 /* DragAreaWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DragAreaWindowController.xib; sourceTree = "<group>"; };
 		80B639051BBD67A0005691E3 /* DragAreaWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragAreaWindowController.swift; sourceTree = "<group>"; };
+		80B639071BBD7849005691E3 /* DragAreaArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragAreaArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				80B638931BBD5C5E005691E3 /* MainWindowController.swift */,
 				80B639051BBD67A0005691E3 /* DragAreaWindowController.swift */,
 				80B638911BBD5930005691E3 /* DragAreaView.swift */,
+				80B639071BBD7849005691E3 /* DragAreaArrowView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B639081BBD7849005691E3 /* DragAreaArrowView.swift in Sources */,
 				80B638801BBD56ED005691E3 /* AppDelegate.swift in Sources */,
 				80B639061BBD67A0005691E3 /* DragAreaWindowController.swift in Sources */,
 				80B638921BBD5930005691E3 /* DragAreaView.swift in Sources */,
