@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		80B6386B1BBD566D005691E3 /* MacIconPreviewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacIconPreviewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B6386B1BBD566D005691E3 /* Icon Previewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Icon Previewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B6387E1BBD56ED005691E3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80B6387F1BBD56ED005691E3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80B638831BBD56F6005691E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		80B6386C1BBD566D005691E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80B6386B1BBD566D005691E3 /* MacIconPreviewer.app */,
+				80B6386B1BBD566D005691E3 /* Icon Previewer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			);
 			name = MacIconPreviewer;
 			productName = MacIconPreviewer;
-			productReference = 80B6386B1BBD566D005691E3 /* MacIconPreviewer.app */;
+			productReference = 80B6386B1BBD566D005691E3 /* Icon Previewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +253,7 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.MacIconPreviewer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Icon Previewer";
 			};
 			name = Debug;
 		};
@@ -265,7 +265,7 @@
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukaskubanek.MacIconPreviewer;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Icon Previewer";
 			};
 			name = Release;
 		};
