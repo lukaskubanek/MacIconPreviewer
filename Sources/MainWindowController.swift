@@ -10,26 +10,24 @@ import Cocoa
 
 internal class MainWindowController: NSWindowController {
     
-    internal lazy var dragAreaWindowController: DragAreaWindowController = {
-        let controller = DragAreaWindowController(windowNibName: "DragAreaWindowController")
-        controller.delegate = self
-        return controller
-    }()
+    @IBOutlet weak var contentView: NSView!
+    @IBOutlet internal var dragAreaView: DragAreaView!
+    @IBOutlet internal var iconsScrollView: NSScrollView!
+    @IBOutlet internal weak var iconsTableView: NSTableView!
     
     internal override func windowDidLoad() {
-        if let dragAreaWindow = dragAreaWindowController.window {
-            window?.beginSheet(dragAreaWindow, completionHandler: nil)
+        contentView.addSubview(dragAreaView)
+        
+        let constraints = [NSLayoutAttribute.Leading, NSLayoutAttribute.Top, NSLayoutAttribute.Trailing, NSLayoutAttribute.Bottom].map {
+            NSLayoutConstraint(item: dragAreaView,
+                               attribute: $0,
+                               relatedBy: .Equal,
+                               toItem: contentView,
+                               attribute: $0,
+                               multiplier: 1,
+                               constant: 0)
         }
+        contentView.addConstraints(constraints)
     }
 
-}
-
-extension MainWindowController: DragAreaWindowControllerDelegate {
-    
-    internal func didDismissDragAreaWindowController(controller: DragAreaWindowController) {
-        if let dragAreaWindow = dragAreaWindowController.window {
-            window?.endSheet(dragAreaWindow)
-        }
-    }
-    
 }
